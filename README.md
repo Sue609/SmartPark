@@ -69,13 +69,13 @@ git clone https://github.com/<your-username>/SmartPark.git
 cd SmartPark
 go mod tidy
 
-
 ```
+
 ### Run the CLI Demo
 ```
 go run cmd/main.go
 
-
+```
 ### You’ll see an interactive menu:
 ```
 --- Parking Lot Menu ---
@@ -85,7 +85,7 @@ go run cmd/main.go
 4. Show parking lot (debug)
 5. Exit
 Enter choice:
-
+```
 ---
 ## 🧱 7. Implementation Notes  
 
