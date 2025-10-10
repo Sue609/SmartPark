@@ -72,11 +72,12 @@ go mod tidy
 
 ```
 ### Run the CLI Demo
+```
 go run cmd/main.go
 
 
 ### You’ll see an interactive menu:
-
+```
 --- Parking Lot Menu ---
 1. Park a car
 2. Find a car
