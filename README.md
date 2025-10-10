@@ -1,69 +1,74 @@
-🅿️ SmartPark
+# 🅿️ **SmartPark**
+### A Go project exploring **open addressing**, **collisions**, and **elegant system design**.
 
-A Go project exploring open addressing, collisions, and elegant system design.
+---
 
+## 🌱 1. Overview
 
-🌱 Overview
+**SmartPark** is a small educational Go project that models a parking lot using an **open-addressing hash map**.
 
-SmartPark is a small educational Go project that models a parking lot using an open-addressing hash map.
+It began as a **data-structure exercise** (insert / lookup / delete with tombstones and probing) and is evolving into a **modular, testable project** that can extend into an **API or UI**.
 
-It started as a data-structure exercise (insert / lookup / delete with tombstones and probing) and is growing into a modular, testable project that can later extend into an API or a UI.
+While educational, SmartPark draws inspiration from **real-world parking logic** — systems that are both efficient and intelligent.
 
-While educational, SmartPark is inspired by real-world parking logic — building systems that are both efficient and intelligent.
+> This README will help you get started, run the demo, and understand the core ideas behind the implementation.
 
-This README will help you get started, run the demo, and understand the core ideas behind the implementation.
+---
 
+## 🧠 2. Core Idea
 
-🧠 Core Idea
+SmartPark simulates a parking system where **car number plates** act as **keys** in a hash table.
 
-SmartPark simulates a parking system where car number plates are keys in a hash table.
-Instead of chaining, we use open addressing and probing (linear probing by default) to resolve collisions.
-Deletion is handled with a tombstone marker so lookups don’t break probe chains.
+- Instead of chaining, it uses **open addressing** and **probing** (linear probing by default) to resolve collisions.  
+- Deletion is handled with a **tombstone marker** so lookups don’t break probe chains.
 
-🎯 Goals
+---
 
-Learn how open addressing works (insert, lookup, delete)
+## 🎯 3. Goals
 
-Visualize collision and probe behavior
+- Learn how **open addressing** works (insert, lookup, delete)  
+- Visualize **collisions** and **probe behavior**  
+- Provide a **clean, extensible codebase** (rehashing, different probing strategies, API, frontend)
 
-Provide a clean, extensible codebase (rehashing, different probing strategies, API, frontend)
+---
 
-🧩 Key Concepts
-Concept	Description
-Hash function	Converts a plate (string) to an index: hash(plate) % size
-Open addressing	All entries live in the table itself (no linked lists)
-Probing	When a slot is full, move to another index (linear, quadratic, or double hashing)
-Tombstone ("DELETED")	Special marker used during deletion so lookups continue probing
-Circular probing	index = (index + 1) % len(table) ensures wrap-around
-⚙️ Features
+## 🧩 4. Key Concepts
 
-Insert a car (uses probing)
+| **Concept** | **Description** |
+|--------------|-----------------|
+| **Hash function** | Converts a plate (string) to an index: `hash(plate) % size` |
+| **Open addressing** | All entries live in the table itself (no linked lists) |
+| **Probing** | When a slot is full, move to another index (linear, quadratic, or double hashing) |
+| **Tombstone ("DELETED")** | Special marker used during deletion so lookups continue probing |
+| **Circular probing** | `index = (index + 1) % len(table)` ensures wrap-around |
 
-Lookup car by plate
+---
 
-Delete a car (marks slot as "DELETED")
+## ⚙️ 5. Features
 
-Print/Visualize the parking lot state (EMPTY, DELETED, or plate)
+1. 🚘 **Insert a car** (uses probing)  
+2. 🔍 **Lookup a car** by plate  
+3. ❌ **Delete a car** (marks slot as `"DELETED"`)  
+4. 🧾 **Print/Visualize** the parking lot state (`EMPTY`, `DELETED`, or plate)  
+5. 🧱 **Modular layout** for adding:  
+   - Alternative probing strategies  
+   - Resizing / rehashing  
+   - REST API & frontend demo
 
-Modular layout for adding:
+---
 
-Alternative probing strategies
+## 🚀 6. Quick Start
 
-Resizing/rehashing
+### Requirements
+- Go 1.18+  
+- Git  
 
-REST API and frontend demo
-
-🚀 Quick Start
-Requirements
-
-Go 1.18+
-
-Git
-
-Clone & Setup
+### Clone & Setup
+```bash
 git clone https://github.com/<your-username>/SmartPark.git
 cd SmartPark
 go mod tidy
+
 
 Run the CLI Demo
 go run cmd/main.go
@@ -139,3 +144,6 @@ See the LICENSE
 Created by Susan Kamau — documenting a learning journey in public.
 If you’d like to help extend the project (API, frontend, demos), message me on LinkedIn
  or open an issue in the repository.
+
+
+ 
