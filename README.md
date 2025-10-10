@@ -136,7 +136,7 @@ See the **LICENSE** file for full details.
 
 ## 💬 11. Contact / Credits
 
-Created by Susan Kamau — documenting a learning journey in public.
+Created by Susan Kamau - documenting a learning journey in public.
 If you’d like to help extend the project (API, frontend, demos), message me on **LinkedIn** or open an issue in the repository.
 
 ---
