@@ -9,7 +9,7 @@
 
 It began as a **data-structure exercise** (insert / lookup / delete with tombstones and probing) and is evolving into a **modular, testable project** that can extend into an **API or UI**.
 
-While educational, SmartPark draws inspiration from **real-world parking logic** — systems that are both efficient and intelligent.
+While educational, SmartPark draws inspiration from **real-world parking logic** - systems that are both efficient and intelligent.
 
 > This README will help you get started, run the demo, and understand the core ideas behind the implementation.
 
@@ -70,11 +70,12 @@ cd SmartPark
 go mod tidy
 
 
-Run the CLI Demo
+```
+### Run the CLI Demo
 go run cmd/main.go
 
 
-You’ll see an interactive menu:
+### You’ll see an interactive menu:
 
 --- Parking Lot Menu ---
 1. Park a car
@@ -84,66 +85,63 @@ You’ll see an interactive menu:
 5. Exit
 Enter choice:
 
-🧱 Implementation Notes
+---
+## 🧱 7. Implementation Notes  
 
-Insert → place item in the first EMPTY or DELETED slot while probing.
+- **Insert** → place item in the first `EMPTY` or `DELETED` slot while probing.  
+- **Lookup** → skip `"DELETED"` slots and stop only at `EMPTY` or full loop.  
+- **Delete** → mark slot as `"DELETED"`, not `EMPTY` (to preserve probe chains).  
+- **Rehashing (future)** → rebuild when tombstones accumulate or load factor > 0.7.  
+- **Probing strategies** →  
+  - **Linear:** simplest, cache-friendly  
+  - **Quadratic:** reduces clustering  
+  - **Double hashing:** uses two hash functions, minimizes collisions  
 
-Lookup → skip "DELETED" slots and stop only at EMPTY or full loop.
+---
 
-Delete → mark slot as "DELETED", not EMPTY (to preserve probe chains).
+## 🛠 8. Roadmap  
 
-Rehashing (future) → rebuild when tombstones accumulate or load factor > 0.7.
+- ✅ Insert / Lookup / Delete (linear probing + tombstones)  
+- ✅ CLI demo + print state  
+- 🔜 Unit tests for insert / lookup / delete / reuse-of-deleted-slot  
+- 🔜 Rehashing and dynamic resizing  
+- 🔜 Alternative probing strategies (quadratic / double hashing)  
+- 🔜 REST API for remote interaction  
+- 🔜 Frontend visualization (HTML + JS)  
+- 🔜 Performance benchmarks and comparison doc  
 
-Probing strategies →
+---
 
-Linear: simplest, cache-friendly
+## 🤝 9. Contributing  
 
-Quadratic: reduces clustering
+1. Fork the repo and create a feature branch:  
+   ```bash
+   git checkout -b feat/rehash-table
+   
+2. Write tests for new features.
 
-Double hashing: uses two hash functions, minimizes collisions
-
-🛠 Roadmap
-
-✅ Insert / Lookup / Delete (linear probing + tombstones)
-
-✅ CLI demo + print state
-
-🔜 Unit tests for insert / lookup / delete / reuse-of-deleted-slot
-
-🔜 Rehashing and dynamic resizing
-
-🔜 Alternative probing strategies (quadratic / double hashing)
-
-🔜 REST API for remote interaction
-
-🔜 Frontend visualization (HTML + JS)
-
-🔜 Performance benchmarks and comparison doc
-
-🤝 Contributing
-
-Fork the repo and create a feature branch:
-
-git checkout -b feat/rehash-table
-
-
-Write tests for new features.
-
-Open a pull request with a clear description and related issue.
+3. Open a pull request with a clear description and related issue.
 
 Be kind, keep PRs focused, and include tests 💛
 
-📜 License
+---
 
-This project is licensed under the MIT License — you’re free to use, modify, and distribute it with proper attribution.
-See the LICENSE
- file for full details.
+## 📜 10. License
 
-💬 Contact / Credits
+This project is licensed under the **MIT License** - you’re free to use, modify, and distribute it with proper attribution.
+See the **LICENSE** file for full details.
+
+---
+
+## 💬 11. Contact / Credits
 
 Created by Susan Kamau — documenting a learning journey in public.
-If you’d like to help extend the project (API, frontend, demos), message me on LinkedIn
- or open an issue in the repository.
+If you’d like to help extend the project (API, frontend, demos), message me on **LinkedIn** or open an issue in the repository.
+
+---
+
+
+
 
 
  
