@@ -1,3 +1,5 @@
+``` Hash function psedocode
+
 DEFINE hash function (plate, table_size):
     sum = 0
     for each char in plate:
