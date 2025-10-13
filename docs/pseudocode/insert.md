@@ -2,7 +2,7 @@
 Takes in a car's number plate and table. First look at the IF the car is already parked using the lookup function.
 If not we find the correct index using the hash function which uses **linear probing** to find an empty spot.
 ```
-DEFINE (plate,table):
+DEFINE (plate, table):
     # Step 1: Check if car already parked
     IF lookup(plate, table):
         PRINT "Car is already parked"
