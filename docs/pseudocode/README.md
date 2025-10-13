@@ -6,7 +6,7 @@ Each pseudocode file represents a single function or component, keeping the syst
 ---
 
 ## 📂 Folder Structure
-
+```
 /pseudocode
 │
 ├── hash.md        → Defines how number plates are converted into hash indexes.
@@ -15,7 +15,7 @@ Each pseudocode file represents a single function or component, keeping the syst
 ├── remove.md           → Removes a car from the parking lot.
 ├── printLot.md             → Prints the current parking lot state for debugging.
 └── main.md        → Represents the user-facing program flow and menu logic.
-
+```
 ---
 
 ## ⚙️ Flow Summary
