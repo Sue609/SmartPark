@@ -11,6 +11,7 @@ From this main shell, users can:
 It continuously loops until the user chooses exit, handling invalid inputs gracefully and calling the core functions (insert, lookup, remove, and printLot) that manages the parking logic.
 
 
+```
 DEFINE main:
     # Step 1: Initialize parking lot with 10 slots
     CREATE an array of empty buckets 'parking_lot', size N
