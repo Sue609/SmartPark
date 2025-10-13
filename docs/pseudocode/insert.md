@@ -1,19 +1,18 @@
-# Insert function pseudocode
-Takes in the plate and table, we first look at the IF the car is already parked in the parking lot using the "lookup function".
-If the car is not parked, we find the index using the hash function, we traverse our hash map until we find an empty spot where we can safely park.
-
+# Insert function pseudocode - Park the car in the HASH TABLE
+Takes in a car's number plate and table. First look at the IF the car is already parked using the lookup function.
+If not we find the correct index using the hash function which uses **linear probing** to find an empty spot.
 ```
 DEFINE (plate,table):
-    # Step 1: Check is car already exists
+    # Step 1: Check if car already parked
     IF lookup(plate, table):
         PRINT "Car is already parked"
         RETURN
     
-    # Step 2: Compute initial index
+    # Step 2: Compute initial parking index
     index = hash(plate, table)
     start = index
 
-    # Step 3: Linear probing - collision resolution technique
+    # Step 3: Linear probing - move forward until an empty slot is found
     WHILE plate[index] is occupied and table[index] != DELETED:
         MOVE to next slot index, index = (index + 1) MOD len(table)
 
