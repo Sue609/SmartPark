@@ -1,20 +1,20 @@
-# Insert function pseudocode - Park the car in the HASH TABLE
-Takes in a car's number plate and table. First look at the IF the car is already parked using the lookup function.
+# Insert function pseudocode - Park the car in the HASH parking_lot
+Takes in a car's number number_plate and parking_lot. First look at the IF the car is already parked using the lookup function.
 If not we find the correct index using the hash function which uses **linear probing** to find an empty spot.
 ```
-DEFINE (plate, table):
+DEFINE Insert(number_plate, parking_lot):
     # Step 1: Check if car already parked
-    IF lookup(plate, table):
+    IF lookup(number_plate, parking_lot):
         PRINT "Car is already parked"
         RETURN
     
     # Step 2: Compute initial parking index
-    index = hash(plate, table)
+    index = hash(number_plate, parking_lot)
     start = index
 
     # Step 3: Linear probing - move forward until an empty slot is found
-    WHILE plate[index] is occupied and table[index] != DELETED:
-        MOVE to next slot index, index = (index + 1) MOD len(table)
+    WHILE number_plate[index] is occupied and parking_lot[index] != DELETED:
+        MOVE to next slot index, index = (index + 1) MOD len(parking_lot)
 
         # Check if all spots are probed
         IF index == start:
@@ -22,7 +22,7 @@ DEFINE (plate, table):
             RETURN
 
     # Step 4: Park the car
-    table[index] = plate
+    parking_lot[index] = number_plate
     PRINT "Car parked successfully"
 
     
