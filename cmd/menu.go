@@ -4,7 +4,7 @@ import "fmt"
 
 func runMenu() {
 	parkingLot := make([]string, 10)
-	var choice string
+	var choice int
 
 	for {
 		fmt.Println("---Parking Lot Menu---")
