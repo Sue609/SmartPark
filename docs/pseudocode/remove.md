@@ -21,8 +21,7 @@ DEFINE remove(number_plate, parking_lot):
 
         # If we have looped back to the start, stop searching
         IF index == start:
-            PRINT "Car not found:", number_plate
-            RETURN
+            BREAK
 
     # Step 3: Car not found
     PRINT "Car not found:", number_plate
