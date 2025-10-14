@@ -13,7 +13,7 @@ DEFINE Insert(number_plate, parking_lot):
     start = index
 
     # Step 3: Linear probing - move forward until an empty slot is found
-    WHILE number_plate[index] is occupied and parking_lot[index] != DELETED:
+    WHILE parking_lot[index] is NOT empty AND parking_lot[index] is NOT DELETED:
         MOVE to next slot index, index = (index + 1) MOD len(parking_lot)
 
         # Check if all spots are probed
