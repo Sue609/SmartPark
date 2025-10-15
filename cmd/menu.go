@@ -13,7 +13,6 @@ func runMenu() {
 		fmt.Println("3) Show parking lot (debug)")
 		fmt.Println("4) Remove a car from parking lot")
 		fmt.Println("5) Exit")
-		fmt.Println("5) Exit")
 
 		fmt.Print("Please enter your choice: ")
 		_, err := fmt.Scanln(&choice)
@@ -22,6 +21,11 @@ func runMenu() {
 			var discard string
 			fmt.Scanln(&discard)
 			continue
+		}
+
+		if choice == 5 {
+			fmt.Println("👋 Goodbye!")
+			break // this stops the loop and exits our program
 		}
 
 		handleAction(choice, &parkingLot)
