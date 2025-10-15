@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"smartpark/internal/parking"
+	"SmartPark/internal/parking"
 )
 
 // Connects the UI to our logic
