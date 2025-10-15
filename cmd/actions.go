@@ -33,10 +33,6 @@ func handleAction(choice int, parkingLot *[]string) {
         fmt.Scanln(&numberPlate)
         parking.Remove(numberPlate, *parkingLot)
 
-    case 5:
-        fmt.Println("👋 Goodbye!")
-        return
-
     default:
         fmt.Println("Please choose a number between 1 and 5.")
 	}
